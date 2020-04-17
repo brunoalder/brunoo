@@ -1,0 +1,36 @@
+def mostrarmenu():
+  print("Menú de opciones para la lista de números a ingresar: \n 1: Ingresar numeros \n 2: Suma \n 3: Resta \n 4: Multiplicacion \n 5: Division \n 0: para terminar")
+
+def uno(lista):
+  a= int(input("Numero a: "))
+  lista.append(a)
+  b= int(input("Numero b: "))
+  lista.append(b)
+  return (lista)
+
+def dos(lista):
+ print( "Suma: " + str(lista[0] + lista[1]))
+
+def tres(lista):
+ print( "Resta: " + str(lista[0] - lista[1]))
+
+def cuatro(lista):
+  print( "Multiplicacion: " + str(lista[0] * lista[1]))
+
+def cinco(lista):
+  print( "Division: " + str(lista[0] / lista[1]))
+  
+dic = {1: uno, 2: dos, 3: tres, 4: cuatro, 5: cinco }
+lista = []
+mostrarmenu()
+opcion=int(input())
+while (opcion != 0):
+  funcion = dic.get(opcion, "Incorrecto")
+  if (opcion != 1 and not lista):
+    print ("No hay elementos")
+  else:
+   funcion(lista)
+  print()
+  print("Nueva accion: ")
+  opcion=int(input()) 
+  
