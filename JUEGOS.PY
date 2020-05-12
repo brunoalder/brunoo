@@ -46,3 +46,7 @@ def main(args):
 if __name__ == '__main__':
   import sys
   sys.exit(main(sys.argv))
+
+	
+#Elegí un diccionario de listas para guardar los datos, porque me parecio la manera mas apropiada de guardar los nombres y los juegos que jugaron, ya que con otros metodos se perdia y sobreponia informacion. Hice una lista con los chicos que hayan jugado al menos una vez a cada uno de los juegos.
+#También elegí que la estructura coincida con el formato Json por preferencia ya que no fue especificado cuál debia usar. y al no saber desde que aplicacion se iba a acceder al archivo elegí la mencionada anteriormente
